@@ -1,0 +1,109 @@
+.navbar-nav{
+    background-color: #10253a !important;
+
+}
+ul {
+    li {
+        padding-left: 30px;
+        padding-right: 20px;
+        // background-color: red;
+        label{
+            color: #fff;
+        }
+        textarea{
+            border-radius: 7px;
+            width: 100%;
+        }
+        button{
+            border-radius: 7px;
+        }
+    }
+}
+
+// Header
+.container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #10253a;
+    height: 100%;
+    color: #fff;
+    .odp{
+    padding: 10px 10px;
+    background-color: #0000FF;
+    border-radius: 7px;
+    font-family: sans-serif;
+
+    }
+    .pdp{
+    padding: 10px 10px;
+    background-color: #FF8C00;
+    font-family: sans-serif;
+    border-radius: 7px;
+    }
+    .positive{
+    padding: 10px 10px;
+    background-color: #FF7F50;
+    border-radius: 7px;
+    font-family: sans-serif;
+    }
+    .sembuh{
+    padding: 10px 10px;
+    background-color: #008000;
+    border-radius: 7px;
+    height: 105px;
+    font-family: sans-serif;
+    }
+    .meninggal{
+        padding: 10px 10px;
+        background-color: #A9A9A9;
+        border-radius: 7px;
+        height: 105px;
+        font-family: sans-serif;
+
+    }
+    span{
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+// Body
+.header-body{
+    margin-left: 4px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-top: 10px;
+
+    .body{
+        h3{
+            color: #000000;
+        }
+    }
+
+    #map{
+        height: 60vh !important;
+        border-radius: 7px;
+    }
+
+    #overflow{
+        width: 100%;
+        height: 60vh;
+        overflow: scroll;
+        
+    }
+
+   
+   
+}
+// .body-map{
+//     background-color: #fff;
+// }
+
+@media screen and (max-width: 600px) {
+    #name {
+      font-size: 10px;
+    }
+    h2{
+        font-size: 18px;
+    }
+}

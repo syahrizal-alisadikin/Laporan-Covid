@@ -1,0 +1,104 @@
+.navbar-nav {
+  background-color: #10253a !important;
+}
+
+ul li {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+ul li label {
+  color: #fff;
+}
+
+ul li textarea {
+  border-radius: 7px;
+  width: 100%;
+}
+
+ul li button {
+  border-radius: 7px;
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #10253a;
+  height: 100%;
+  color: #fff;
+}
+
+.container .odp {
+  padding: 10px 10px;
+  background-color: #0000FF;
+  border-radius: 7px;
+  font-family: sans-serif;
+}
+
+.container .pdp {
+  padding: 10px 10px;
+  background-color: #FF8C00;
+  font-family: sans-serif;
+  border-radius: 7px;
+}
+
+.container .positive {
+  padding: 10px 10px;
+  background-color: #FF7F50;
+  border-radius: 7px;
+  font-family: sans-serif;
+}
+
+.container .sembuh {
+  padding: 10px 10px;
+  background-color: #008000;
+  border-radius: 7px;
+  height: 105px;
+  font-family: sans-serif;
+}
+
+.container .meninggal {
+  padding: 10px 10px;
+  background-color: #A9A9A9;
+  border-radius: 7px;
+  height: 105px;
+  font-family: sans-serif;
+}
+
+.container span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header-body {
+  margin-left: 4px;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+.header-body .body h3 {
+  color: #000000;
+}
+
+.header-body #map {
+  height: 60vh !important;
+  border-radius: 7px;
+}
+
+.header-body #overflow {
+  width: 100%;
+  height: 60vh;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 600px) {
+  #name {
+    font-size: 10px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
