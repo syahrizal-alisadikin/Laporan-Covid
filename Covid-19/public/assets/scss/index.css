@@ -135,19 +135,24 @@ h4 {
   padding-top: 10px;
 }
 
+#footer .sosialmedia {
+  float: right;
+  margin-right: 0px !important;
+}
+
 #footer #sosmed {
-  width: 180px;
+  width: 130px;
   margin-top: 5px;
 }
 
 #footer #gambar {
-  width: 90px;
-  height: 65px;
+  width: 45px;
+  height: 45px;
 }
 
 #footer #instagram {
-  width: 90px;
-  height: 65px;
+  width: 45px;
+  height: 45px;
 }
 
 #terang {

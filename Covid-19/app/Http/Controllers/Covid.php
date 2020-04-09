@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 
@@ -19,7 +20,7 @@ class Covid extends Controller
         $dataprov = json_decode($Provinsi);
         $datanas = json_decode($Nasional);
         // dd($datanas);
-        return view ('page.home',[
+        return view('page.home', [
             'datanas' => $datanas,
             'dataprov' => $dataprov
         ]);
@@ -32,7 +33,7 @@ class Covid extends Controller
      */
     public function create()
     {
-        //
+        return view('page.jam');
     }
 
     /**

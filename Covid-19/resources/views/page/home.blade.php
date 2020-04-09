@@ -24,7 +24,9 @@
 </head>
 
 <style>
-   
+   #jamupdate{
+     color: aliceblue;
+   }
     
   #data, #allData {
       display: none;
@@ -133,7 +135,7 @@
                     <div class="body">
                       <div class="zona d-flex">
                         <h4 style="color:#000">Peta Penyebaran </h4>
-                          <div id="jamupdate" class="d-flex"  style="margin-left:auto; color:#000">
+                          <div id="" class="d-flex"  style="margin-left:auto; color:#000">
                             <h6 class="mt-1">Real Time Update &nbsp; </h6>
                             <?php
                             header('Access-Control-Allow-Origin: *');
@@ -192,13 +194,18 @@
             </div>
           </footer>
         </div>
-        <div class="col-md-4 text-right">
-          <h6>Temukan Kami di :</h6>
+        <div class="col-md-4 text-center">
+          {{-- <h6>Develop By Suluh Kerta Nusantara @copyright 2020</h6> --}}
+          {{-- <h6 class="text-center"></h6> --}}
         </div>
-        <div class="col-md-5 d-flex text-center">
-        <a href="#" class="mx-3"><img src="{{url('assets/gambar/instagram.jpg')}}" id="instagram" class="rounded-circle img-thumbnail img-responsive" alt="" ></a>
-        <a href="#" class="mx-3"><img src="{{url('assets/gambar/facbook.png')}}" id="gambar" class="img-thumbnail rounded-circle img-responsive" alt="" ></a>
-        <a href="#" class="mx-3"><img src="{{url('assets/gambar/playstore.JPG')}}" id="sosmed" alt="" ></a>
+        <div class="col-md-5" >
+          <div class="sosialmedia d-flex"  >
+          <h6 class="mt-3">Temukan Kami di :</h6>
+          <a href="#" class="ml-2"><img src="{{url('assets/gambar/instagram.jpg')}}" id="instagram" class="rounded-circle img-thumbnail img-responsive" alt="" ></a>
+          <a href="#" class="mx-2"><img src="{{url('assets/gambar/facbook.png')}}" id="gambar" class="img-thumbnail rounded-circle img-responsive" alt="" ></a>
+          <a href="#"><img src="{{url('assets/gambar/playstore.JPG')}}" id="sosmed" alt="" ></a>
+          
+        </div>
         </div>
       </div>
     </div>

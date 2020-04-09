@@ -13,4 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','Covid@index');
+Route::get('/', 'Covid@index');
+Route::get('/jam', 'Covid@create');
