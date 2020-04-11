@@ -168,10 +168,11 @@
                                     <th class="text-center"> Daerah</th>
                                     <th class="text-center"> Kasus</th>
                                   </tr>
-                                 @foreach ($dataprov as $data)
+                                 @foreach ($array[0] as $data)
+                                
                                   <tr>
-                                    <th style="width:70%; padding-left:10px;">{{$data->attributes->Provinsi }}</th>
-                                    <td class="text-center">{{$data->attributes->Kasus_Posi }}</td>
+                                  <th style="width:70%; padding-left:10px;">{{$data['provensi']}}</th>
+                                  <td class="text-center">{{ $data['jumlahorang'] }}</td>
                                   </tr>                                     
                                  @endforeach
                                 </tbody>
@@ -194,18 +195,32 @@
             </div>
           </footer>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-5 text-center">
           {{-- <h6>Develop By Suluh Kerta Nusantara @copyright 2020</h6> --}}
           {{-- <h6 class="text-center"></h6> --}}
         </div>
-        <div class="col-md-5" >
-          <div class="sosialmedia d-flex"  >
-          <h6 class="mt-3">Temukan Kami di :</h6>
-          <a href="#" class="ml-2"><img src="{{url('assets/gambar/instagram.jpg')}}" id="instagram" class="rounded-circle img-thumbnail img-responsive" alt="" ></a>
-          <a href="#" class="mx-2"><img src="{{url('assets/gambar/facbook.png')}}" id="gambar" class="img-thumbnail rounded-circle img-responsive" alt="" ></a>
-          <a href="#"><img src="{{url('assets/gambar/playstore.JPG')}}" id="sosmed" alt="" ></a>
-          
-        </div>
+        <div class="col-md-4" id="location" >
+          <ul class="d-flex" style="list-style:none;">
+            <li class="list-item mr-2" > <i class="fab fa-instagram"></i> </li>
+            <li class="list-item">  <a href="#" style="text-decoration:none; color:#fff;">  @suluhnusantara</a></li>
+          </ul>
+          <ul class="d-flex" style="list-style:none;">
+            <li class="list-item mr-2" > <i class="fa fa-globe"></i>  </li>
+            <li class="list-item">  <a href="#" style="text-decoration:none; color:#fff;"> www.suluhkertanusantara.org</a></li>
+          </ul>
+         
+          <ul class="d-flex" style="list-style:none;">
+            <li class="list-item mr-2" > <i class="fa fa-envelope"></i></li>
+            <li class="list-item"> Humas@suluhkertanusantara.org </li>
+          </ul>
+          <ul class="d-flex" style="list-style:none;">
+            <li class="list-item mr-2" > <i class="fa fa-phone"></i></li>
+            <li class="list-item"> +6221 8282 6852 </li>
+          </ul>
+          <ul class="d-flex" style="list-style:none;">
+            <li class="list-item mr-2"> <i class="fa fa-map-marker"></i></li>
+            <li class="list-item"> <span> Ruko Grand Wisata Blok AA5 No. 6 Grand Wisata, Bekasi, Jawa Barat 17510 - Indonesia</span> </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -455,7 +470,9 @@ function showAllColleges(allData) {
 	});
 });
 </script>
-
+<script>
+  var database = firebase.database();
+</script>
 </body>
 
 </html>
