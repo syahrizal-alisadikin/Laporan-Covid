@@ -1,8 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
+use Kreait\Firebase;
+use Kreait\Firebase\Factory;
+use Kreait\Firebase\ServiceAccount;
+use Kreait\Firebase\Database;
+
+use function GuzzleHttp\json_decode;
+use function GuzzleHttp\json_encode;
 
 class Covid extends Controller
 {
@@ -14,14 +22,31 @@ class Covid extends Controller
     public function index()
 
     {
+        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '/corona-indonesia-f0b09-firebase-adminsdk-y57fx-ceab85cbd6.json');
+        $firebase = (new Factory)
+            ->withServiceAccount($serviceAccount)
+            ->withDatabaseUri('https://corona-indonesia-f0b09.firebaseio.com/')
+            ->create();
+        $database = $firebase->getDatabase();
+        $newPost = $database
+            ->getReference('Maps');
+        $array = array($newPost->getvalue());
+        // dd($array);
+        // dd($array['0']);
+        // echo "<pre>";
+        // print_r($array);
+
         $Nasional = Http::get('https://api.kawalcorona.com/indonesia');
-        $Provinsi = Http::get('https://api.kawalcorona.com/indonesia/provinsi');
-        $dataprov = json_decode($Provinsi);
+        // $Provinsi = Http::get('https://api.kawalcorona.com/indonesia/provinsi');
+        // $dataprov = json_decode($Provinsi); udah ke get? udh pak yang aray yeee ee
         $datanas = json_decode($Nasional);
         // dd($datanas);
-        return view ('page.home',[
+
+        // dd($array[0]);
+        return view('page.home', [
+            'array' => $array,
             'datanas' => $datanas,
-            'dataprov' => $dataprov
+
         ]);
     }
 
@@ -32,7 +57,7 @@ class Covid extends Controller
      */
     public function create()
     {
-        //
+        return view('page.jam');
     }
 
     /**
